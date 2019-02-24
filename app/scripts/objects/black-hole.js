@@ -13,6 +13,6 @@ export default class BlackHole extends Phaser.GameObjects.Sprite {
 			scene.cameras.main.height / 2
 		);
 		this.setOrigin(0.5);
-		this.setScale(15);
+		this.setScale(0.3);
 	}
 }
