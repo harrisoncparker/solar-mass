@@ -19,7 +19,7 @@ export default class Game extends Phaser.Scene {
 	 */
 	create() {
 		console.log('yeeet');
-		this.logo = this.add.existing(new BlackHole(this));
+		this.blackHole = this.add.existing(new BlackHole(this));
 	}
 
 	/**
@@ -31,6 +31,6 @@ export default class Game extends Phaser.Scene {
 	 *  @param {number} dt Time elapsed since last update.
 	 */
 	update(/* t, dt */) {
-		// this.graphics.fillCircleShape(this.blackhole);
+		this.blackHole.update();
 	}
 }

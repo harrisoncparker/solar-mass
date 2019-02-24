@@ -15,4 +15,8 @@ export default class BlackHole extends Phaser.GameObjects.Sprite {
 		this.setOrigin(0.5);
 		this.setScale(0.3);
 	}
+
+	update() {
+		this.setAngle( this.angle + 0.3 );
+	}
 }
