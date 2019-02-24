@@ -1,28 +1,18 @@
-export default class BlackHole extends Phaser.GameObjects.Graphics {
+export default class BlackHole extends Phaser.GameObjects.Sprite {
 	/**
-	 *  My custom graphic.
+	 *  My custom sprite.
 	 *
 	 *  @constructor
 	 *  @class BlackHole
 	 *  @extends Phaser.GameObjects.Sprite
-	 *  @param {Phaser.Scene} scene - The scene that owns this graphic.
-	 *  @param {object} [options={}] - Configuration parameters of this graphic.
-	 *  @param {number} options.x - The horizontal coordinate relative to the scene viewport.
-	 *  @param {number} options.y - The vertical coordinate relative to the scene viewport.
+	 *  @param {Phaser.Scene} scene - The scene that owns this sprite.
+	 *  @param {number} x - The horizontal coordinate relative to the scene viewport.
+	 *  @param {number} y - The vertical coordinate relative to the scene viewport.
 	 */
-	constructor(scene) {
-		super(scene);
+	constructor(scene, x, y) {
+		super(scene, x, y, 'black-hole-sprite');
 
-		const x = scene.cameras.main.width / 2;
-		const y = scene.cameras.main.height / 2;
-
-		this.centerCircle = new Phaser.Geom.Circle(x, y, 15);
-
-		this.setPosition(x, y);
-		this.setOrigin(0.5);
-	}
-
-	update() {
-		this.fillStyle('#233644', 1);
+		//  Add this game object to the owner scene.
+		scene.children.add(this);
 	}
 }

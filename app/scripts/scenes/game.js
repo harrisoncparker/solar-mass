@@ -1,4 +1,4 @@
-// import BlackHole from '@/objects/black-hole';
+import BlackHole from '@/objects/black-hole';
 
 export default class Game extends Phaser.Scene {
 	/**
@@ -18,15 +18,8 @@ export default class Game extends Phaser.Scene {
 	 *  @param {object} data Initialization parameters.
 	 */
 	create() {
-		this.graphics = this.add.graphics();
-
-		// console.log(this.graphics);
-		//
-		// // this.blackHole = this.add.existing(new BlackHole(this));
-		// this.blackhole = new Phaser.Geom.Circle(50, 50, 200);
-		// // this.graphics.fillStyle('');
-
-
+		console.log('yeeet');
+		this.logo = this.add.existing(new BlackHole(this, 50, 50));
 	}
 
 	/**
