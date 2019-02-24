@@ -47,7 +47,7 @@ export const type = Phaser.AUTO;
 /**
  *  Whether to disable antialiasing or not. Great for pixel art.
  */
-export const pixelArt = false;
+export const pixelArt = true;
 
 /**
  *  Whether to enable canvas transparency or not.
