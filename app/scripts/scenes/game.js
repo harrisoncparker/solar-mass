@@ -19,7 +19,7 @@ export default class Game extends Phaser.Scene {
 	 */
 	create() {
 		console.log('yeeet');
-		this.logo = this.add.existing(new BlackHole(this, 50, 50));
+		this.logo = this.add.existing(new BlackHole(this));
 	}
 
 	/**
